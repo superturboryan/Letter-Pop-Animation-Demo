@@ -14,6 +14,10 @@
 		94F9A4AE25002E2F00DAF2B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F9A4AD25002E2F00DAF2B2 /* Assets.xcassets */; };
 		94F9A4B125002E2F00DAF2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F9A4AF25002E2F00DAF2B2 /* LaunchScreen.storyboard */; };
 		94F9A4B425002E2F00DAF2B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4B325002E2F00DAF2B2 /* main.m */; };
+		94F9A4BE25003CFE00DAF2B2 /* AnimatedPopStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4BD25003CFE00DAF2B2 /* AnimatedPopStackView.m */; };
+		94F9A4C12500481300DAF2B2 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4C02500481300DAF2B2 /* NSString+Helper.m */; };
+		94F9A4C425019CD200DAF2B2 /* Bungee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F9A4C325019BA700DAF2B2 /* Bungee-Regular.ttf */; };
+		94F9A4C82501ACD300DAF2B2 /* HapticsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4C62501ACD300DAF2B2 /* HapticsHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,13 @@
 		94F9A4B025002E2F00DAF2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94F9A4B225002E2F00DAF2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94F9A4B325002E2F00DAF2B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94F9A4BC25003CFE00DAF2B2 /* AnimatedPopStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedPopStackView.h; sourceTree = "<group>"; };
+		94F9A4BD25003CFE00DAF2B2 /* AnimatedPopStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimatedPopStackView.m; sourceTree = "<group>"; };
+		94F9A4BF2500481300DAF2B2 /* NSString+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		94F9A4C02500481300DAF2B2 /* NSString+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		94F9A4C325019BA700DAF2B2 /* Bungee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bungee-Regular.ttf"; sourceTree = "<group>"; };
+		94F9A4C62501ACD300DAF2B2 /* HapticsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HapticsHelper.m; sourceTree = "<group>"; };
+		94F9A4C72501ACD300DAF2B2 /* HapticsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HapticsHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +72,50 @@
 		94F9A4A025002E2C00DAF2B2 /* Letter-Pop-Animation-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				94F9A4A125002E2C00DAF2B2 /* AppDelegate.h */,
-				94F9A4A225002E2C00DAF2B2 /* AppDelegate.m */,
-				94F9A4A425002E2C00DAF2B2 /* SceneDelegate.h */,
-				94F9A4A525002E2C00DAF2B2 /* SceneDelegate.m */,
+				94F9A4C52501ABEC00DAF2B2 /* Helpers */,
+				94F9A4C325019BA700DAF2B2 /* Bungee-Regular.ttf */,
+				94F9A4BB25003A7000DAF2B2 /* AnimatedNumberStackView */,
+				94F9A4BA25002F7600DAF2B2 /* Supporting Files */,
 				94F9A4A725002E2C00DAF2B2 /* ViewController.h */,
 				94F9A4A825002E2C00DAF2B2 /* ViewController.m */,
 				94F9A4AA25002E2C00DAF2B2 /* Main.storyboard */,
-				94F9A4AD25002E2F00DAF2B2 /* Assets.xcassets */,
 				94F9A4AF25002E2F00DAF2B2 /* LaunchScreen.storyboard */,
+				94F9A4AD25002E2F00DAF2B2 /* Assets.xcassets */,
 				94F9A4B225002E2F00DAF2B2 /* Info.plist */,
 				94F9A4B325002E2F00DAF2B2 /* main.m */,
 			);
 			path = "Letter-Pop-Animation-Demo";
+			sourceTree = "<group>";
+		};
+		94F9A4BA25002F7600DAF2B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94F9A4A125002E2C00DAF2B2 /* AppDelegate.h */,
+				94F9A4A225002E2C00DAF2B2 /* AppDelegate.m */,
+				94F9A4A425002E2C00DAF2B2 /* SceneDelegate.h */,
+				94F9A4A525002E2C00DAF2B2 /* SceneDelegate.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94F9A4BB25003A7000DAF2B2 /* AnimatedNumberStackView */ = {
+			isa = PBXGroup;
+			children = (
+				94F9A4BC25003CFE00DAF2B2 /* AnimatedPopStackView.h */,
+				94F9A4BD25003CFE00DAF2B2 /* AnimatedPopStackView.m */,
+			);
+			path = AnimatedNumberStackView;
+			sourceTree = "<group>";
+		};
+		94F9A4C52501ABEC00DAF2B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				94F9A4C72501ACD300DAF2B2 /* HapticsHelper.h */,
+				94F9A4C62501ACD300DAF2B2 /* HapticsHelper.m */,
+				94F9A4BF2500481300DAF2B2 /* NSString+Helper.h */,
+				94F9A4C02500481300DAF2B2 /* NSString+Helper.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F9A4C425019CD200DAF2B2 /* Bungee-Regular.ttf in Resources */,
 				94F9A4B125002E2F00DAF2B2 /* LaunchScreen.storyboard in Resources */,
 				94F9A4AE25002E2F00DAF2B2 /* Assets.xcassets in Resources */,
 				94F9A4AC25002E2C00DAF2B2 /* Main.storyboard in Resources */,
@@ -147,9 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F9A4A925002E2C00DAF2B2 /* ViewController.m in Sources */,
+				94F9A4C82501ACD300DAF2B2 /* HapticsHelper.m in Sources */,
 				94F9A4A325002E2C00DAF2B2 /* AppDelegate.m in Sources */,
 				94F9A4B425002E2F00DAF2B2 /* main.m in Sources */,
 				94F9A4A625002E2C00DAF2B2 /* SceneDelegate.m in Sources */,
+				94F9A4BE25003CFE00DAF2B2 /* AnimatedPopStackView.m in Sources */,
+				94F9A4C12500481300DAF2B2 /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
