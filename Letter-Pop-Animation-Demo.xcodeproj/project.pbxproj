@@ -90,6 +90,14 @@
 			path = SKScene;
 			sourceTree = "<group>";
 		};
+		9435495E2502D60100056680 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				94F9A4C325019BA700DAF2B2 /* Bungee-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		94F9A49525002E2C00DAF2B2 = {
 			isa = PBXGroup;
 			children = (
@@ -109,9 +117,9 @@
 		94F9A4A025002E2C00DAF2B2 /* Letter-Pop-Animation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9435495E2502D60100056680 /* Fonts */,
 				9435495225027C9A00056680 /* SpriteKit */,
 				94F9A4C52501ABEC00DAF2B2 /* Helpers */,
-				94F9A4C325019BA700DAF2B2 /* Bungee-Regular.ttf */,
 				94F9A4BB25003A7000DAF2B2 /* AnimatedNumberStackView */,
 				94F9A4BA25002F7600DAF2B2 /* Supporting Files */,
 				94F9A4A725002E2C00DAF2B2 /* ViewController.h */,

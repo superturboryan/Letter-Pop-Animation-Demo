@@ -80,7 +80,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EYC-Pa-bhP" secondAttribute="trailing" constant="20" id="DQe-8C-OO6"/>
-                            <constraint firstItem="EYC-Pa-bhP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UFC-Wy-1GX"/>
+                            <constraint firstItem="EYC-Pa-bhP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UFC-Wy-1GX"/>
                             <constraint firstItem="EYC-Pa-bhP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yb2-ga-HgG"/>
                             <constraint firstItem="EYC-Pa-bhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjJ-L3-xDo"/>
                             <constraint firstItem="Emt-aQ-LLe" firstAttribute="centerX" secondItem="EYC-Pa-bhP" secondAttribute="centerX" id="gNO-M9-0hj"/>

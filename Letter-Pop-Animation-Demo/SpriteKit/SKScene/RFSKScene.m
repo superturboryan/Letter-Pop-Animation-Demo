@@ -26,11 +26,11 @@
     SKEmitterNode *emitter = [SKEmitterNode nodeWithFileNamed:@"ConfettiPop2"];
         
     NSArray *colorArray = @[
-    UIColor.systemRedColor,
-    UIColor.systemBlueColor,
-    UIColor.systemOrangeColor,
+    UIColor.systemTealColor,
     UIColor.systemYellowColor,
-    UIColor.systemPinkColor
+    UIColor.systemPurpleColor,
+    UIColor.systemGreenColor,
+    UIColor.systemOrangeColor
     ];
     
     emitter.position = position;

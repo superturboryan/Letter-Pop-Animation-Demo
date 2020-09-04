@@ -27,10 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tapper];
-    
     [self setupView];
 }
 
@@ -39,21 +35,20 @@
     self.animateButton.layer.cornerRadius = 5.0;
     [self loadSKView];
     [self loadEmptyScene];
-}
-
-- (void)loadSKView {
-    self.skView = [[SKView alloc]initWithFrame:self.view.frame];
-    self.skView.allowsTransparency = YES;
-    [self.view insertSubview:self.skView atIndex:0];
+    
+    UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tapper];
 }
 
 - (IBAction)tappedAnimateButton:(UIButton *)sender {
+    [self dismissKeyboard];
     [self.animatedPopStackView clear];
-    [self.animatedPopStackView addLabelsForString:self.textInput.text animated:self.animatedSwitch.on completion:^{
+    [self.animatedPopStackView addLabelsForString:self.textInput.text
+                                         animated:self.animatedSwitch.on
+                                       completion:^{
         [self playConfetti];
     }];
     self.textInput.text = @"";
-    [self dismissKeyboard];
 }
 
 -(void)dismissKeyboard {
@@ -63,6 +58,12 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self tappedAnimateButton:nil];
     return YES;
+}
+
+- (void)loadSKView {
+    self.skView = [[SKView alloc]initWithFrame:self.view.frame];
+    self.skView.allowsTransparency = YES;
+    [self.view insertSubview:self.skView atIndex:0];
 }
 
 - (void)loadEmptyScene {
