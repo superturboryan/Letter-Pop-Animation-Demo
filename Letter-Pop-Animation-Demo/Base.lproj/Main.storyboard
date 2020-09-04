@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,21 +20,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27P-d8-Ksh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="whF-C2-xQE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Emt-aQ-LLe">
                                 <rect key="frame" x="30.5" y="99.5" width="314.5" height="84"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number to display" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MER-te-BjQ">
                                         <rect key="frame" x="0.0" y="0.0" width="314.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="20"/>
-                                        <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5rZ-up-Rwv">
@@ -85,17 +77,14 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="27P-d8-Ksh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0mx-a6-uRi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EYC-Pa-bhP" secondAttribute="trailing" constant="20" id="DQe-8C-OO6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="27P-d8-Ksh" secondAttribute="trailing" id="KYH-6s-sPF"/>
                             <constraint firstItem="EYC-Pa-bhP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UFC-Wy-1GX"/>
                             <constraint firstItem="EYC-Pa-bhP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yb2-ga-HgG"/>
                             <constraint firstItem="EYC-Pa-bhP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjJ-L3-xDo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="27P-d8-Ksh" secondAttribute="bottom" id="f4L-na-k42"/>
                             <constraint firstItem="Emt-aQ-LLe" firstAttribute="centerX" secondItem="EYC-Pa-bhP" secondAttribute="centerX" id="gNO-M9-0hj"/>
                             <constraint firstItem="EYC-Pa-bhP" firstAttribute="top" secondItem="Emt-aQ-LLe" secondAttribute="bottom" constant="50" id="qwB-JA-U8B"/>
-                            <constraint firstItem="27P-d8-Ksh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zJx-fY-5Ih"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

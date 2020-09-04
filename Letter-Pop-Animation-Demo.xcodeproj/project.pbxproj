@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9435495925027C9A00056680 /* ConfettiPop.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9435495425027C9A00056680 /* ConfettiPop.sks */; };
+		9435495A25027C9A00056680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9435495525027C9A00056680 /* Assets.xcassets */; };
+		9435495B25027C9A00056680 /* RFSKScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9435495725027C9A00056680 /* RFSKScene.m */; };
+		9435495D25027DD300056680 /* ConfettiPop2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9435495C25027DD300056680 /* ConfettiPop2.sks */; };
 		94F9A4A325002E2C00DAF2B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4A225002E2C00DAF2B2 /* AppDelegate.m */; };
 		94F9A4A625002E2C00DAF2B2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4A525002E2C00DAF2B2 /* SceneDelegate.m */; };
 		94F9A4A925002E2C00DAF2B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F9A4A825002E2C00DAF2B2 /* ViewController.m */; };
@@ -21,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9435495425027C9A00056680 /* ConfettiPop.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ConfettiPop.sks; sourceTree = "<group>"; };
+		9435495525027C9A00056680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9435495725027C9A00056680 /* RFSKScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSKScene.m; sourceTree = "<group>"; };
+		9435495825027C9A00056680 /* RFSKScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSKScene.h; sourceTree = "<group>"; };
+		9435495C25027DD300056680 /* ConfettiPop2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ConfettiPop2.sks; sourceTree = "<group>"; };
 		94F9A49E25002E2C00DAF2B2 /* Letter-Pop-Animation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Letter-Pop-Animation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F9A4A125002E2C00DAF2B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94F9A4A225002E2C00DAF2B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +62,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9435495225027C9A00056680 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				9435495325027C9A00056680 /* Emitter */,
+				9435495625027C9A00056680 /* SKScene */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		9435495325027C9A00056680 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				9435495C25027DD300056680 /* ConfettiPop2.sks */,
+				9435495425027C9A00056680 /* ConfettiPop.sks */,
+				9435495525027C9A00056680 /* Assets.xcassets */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		9435495625027C9A00056680 /* SKScene */ = {
+			isa = PBXGroup;
+			children = (
+				9435495725027C9A00056680 /* RFSKScene.m */,
+				9435495825027C9A00056680 /* RFSKScene.h */,
+			);
+			path = SKScene;
+			sourceTree = "<group>";
+		};
 		94F9A49525002E2C00DAF2B2 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +109,7 @@
 		94F9A4A025002E2C00DAF2B2 /* Letter-Pop-Animation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9435495225027C9A00056680 /* SpriteKit */,
 				94F9A4C52501ABEC00DAF2B2 /* Helpers */,
 				94F9A4C325019BA700DAF2B2 /* Bungee-Regular.ttf */,
 				94F9A4BB25003A7000DAF2B2 /* AnimatedNumberStackView */,
@@ -178,6 +216,9 @@
 				94F9A4C425019CD200DAF2B2 /* Bungee-Regular.ttf in Resources */,
 				94F9A4B125002E2F00DAF2B2 /* LaunchScreen.storyboard in Resources */,
 				94F9A4AE25002E2F00DAF2B2 /* Assets.xcassets in Resources */,
+				9435495D25027DD300056680 /* ConfettiPop2.sks in Resources */,
+				9435495925027C9A00056680 /* ConfettiPop.sks in Resources */,
+				9435495A25027C9A00056680 /* Assets.xcassets in Resources */,
 				94F9A4AC25002E2C00DAF2B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9435495B25027C9A00056680 /* RFSKScene.m in Sources */,
 				94F9A4A925002E2C00DAF2B2 /* ViewController.m in Sources */,
 				94F9A4C82501ACD300DAF2B2 /* HapticsHelper.m in Sources */,
 				94F9A4A325002E2C00DAF2B2 /* AppDelegate.m in Sources */,

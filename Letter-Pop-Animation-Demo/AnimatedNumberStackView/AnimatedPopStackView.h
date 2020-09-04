@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AnimatedPopStackView : UIStackView
 
-- (void)addLabelsForString:(NSString *)string animated:(BOOL)animated;
+- (void)addLabelsForString:(NSString *)string animated:(BOOL)animated completion:(void(^)(void))completion;
 
 - (void)clear;
 

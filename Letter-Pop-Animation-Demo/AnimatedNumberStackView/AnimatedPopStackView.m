@@ -10,6 +10,7 @@
 #import "NSString+Helper.h"
 #import "HapticsHelper.h"
 
+
 @interface AnimatedPopStackView()
 
 @end
@@ -31,11 +32,12 @@
     self.clipsToBounds = NO;
 }
 
-- (void)addLabelsForString:(NSString *)string animated:(BOOL)animated {
+- (void)addLabelsForString:(NSString *)string animated:(BOOL)animated completion:(nonnull void (^)(void))completion {
     
     NSArray<NSString *> *individualChars = string.charArray;
     
     [individualChars enumerateObjectsUsingBlock:^(NSString * _Nonnull string, NSUInteger idx, BOOL * _Nonnull stop) {
+        
         UILabel *newCharLabel = [[UILabel alloc] init];
         newCharLabel.text = string;
         newCharLabel.font = [UIFont fontWithName:@"Bungee-Regular" size:130];
@@ -43,35 +45,47 @@
         newCharLabel.adjustsFontSizeToFitWidth = YES;
         newCharLabel.minimumScaleFactor = 0.5;
         [self addArrangedSubview:newCharLabel];
+//        newCharLabel.hidden = YES;
         
         //Shadow
         newCharLabel.layer.shadowColor = UIColor.systemPinkColor.CGColor;
         newCharLabel.layer.shadowOffset = CGSizeMake(0, 5);
         newCharLabel.layer.shadowOpacity = 1.0;
-        newCharLabel.layer.shadowRadius = 0;
+        newCharLabel.layer.shadowRadius = 0; // No blur
         
         //Animation
         CGAffineTransform rotate = CGAffineTransformMakeRotation([self rotationDegreesForIndex:idx withTotalCount:individualChars.count] * M_PI/180);
         CGAffineTransform raise = CGAffineTransformMakeTranslation(0, [self raiseForIndex:idx withTotalCount:individualChars.count]);
         CGAffineTransform shrink = CGAffineTransformMakeScale(0.001, 0.001);
 
+        BOOL isLastChar = idx == individualChars.count - 1;
+        
         if (!animated) {
+//            newCharLabel.hidden = NO;
             newCharLabel.transform = CGAffineTransformConcat(rotate, raise);
+            if (isLastChar) {
+                completion();
+            }
         }
         else {
             newCharLabel.transform = shrink;
-            newCharLabel.alpha = 0;
+            newCharLabel.alpha = 0.1;
             [self softHaptic];
+
             [UIView animateWithDuration:0.35
                                   delay:(idx * 0.35)
                                 options:UIViewAnimationOptionCurveEaseOut
                              animations:^{
+                
                 [self performSelector:@selector(softHaptic) withObject:nil afterDelay:(idx * 0.35)];
+//                newCharLabel.hidden = NO;
                 newCharLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1, 1), CGAffineTransformConcat(rotate, raise));
                 newCharLabel.alpha = 1.0;
+                
             } completion:^(BOOL finished) {
-                BOOL isLastChar = idx == individualChars.count - 1;
+                
                 if (isLastChar) {
+                    completion();
                     [self showEmojiPopup];
                 }
             }];
