@@ -49,7 +49,7 @@
         
         //Shadow
         newCharLabel.layer.shadowColor = UIColor.systemPinkColor.CGColor;
-        newCharLabel.layer.shadowOffset = CGSizeMake(0, 5);
+        
         newCharLabel.layer.shadowOpacity = 1.0;
         newCharLabel.layer.shadowRadius = 0; // No blur
         
@@ -62,6 +62,7 @@
         
         if (!animated) {
 //            newCharLabel.hidden = NO;
+            newCharLabel.layer.shadowOffset = CGSizeMake(0, 5);
             newCharLabel.transform = CGAffineTransformConcat(rotate, raise);
             if (isLastChar) {
                 completion();
@@ -79,6 +80,7 @@
                 
                 [self performSelector:@selector(softHaptic) withObject:nil afterDelay:(idx * 0.35)];
 //                newCharLabel.hidden = NO;
+                newCharLabel.layer.shadowOffset = CGSizeMake(0, 5);
                 newCharLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1, 1), CGAffineTransformConcat(rotate, raise));
                 newCharLabel.alpha = 1.0;
                 
@@ -111,7 +113,7 @@
     label.alpha = 0.0;
     
     [self performSelector:@selector(softHaptic) withObject:nil afterDelay:0.1];
-    [UIView animateWithDuration:0.45 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.45 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         label.transform = CGAffineTransformMakeScale(2, 2);
         label.alpha = 1.0;
     } completion:^(BOOL finished) {
